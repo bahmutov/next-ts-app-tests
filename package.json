@@ -1,7 +1,7 @@
 {
   "name": "next-ts-app-tests",
   "version": "1.0.0",
-  "description": "",
+  "description": "Cypress tests for bahmutov/next-ts-app repo",
   "private": true,
   "main": "index.js",
   "scripts": {
