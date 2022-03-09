@@ -5,7 +5,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "open:prod": "CYPRESS_baseUrl=https://next-ts-app-swart.vercel.app/ cypress open"
   },
   "repository": {
     "type": "git",
