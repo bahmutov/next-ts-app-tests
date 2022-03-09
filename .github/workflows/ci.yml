@@ -8,10 +8,26 @@ jobs:
       - name: Check out this repo 🛎
         uses: actions/checkout@v3
 
+      - name: Get the build info 🖨
+        uses: bahmutov/get-build-id@v1
+        id: get-build-id
+        with:
+          url: 'https://next-ts-app-swart.vercel.app/'
+
+      - name: Print the build outputs 🖨
+        run: |
+          echo "Next.js build ID: ${{ steps.get-build-id.outputs.buildId }}"
+          echo "Next.js build branch: ${{ steps.get-build-id.outputs.branch }}"
+          echo "Next.js build commit: ${{ steps.get-build-id.outputs.commit }}"
+
       - name: Check out the application repo 🛎
         uses: actions/checkout@v3
         with:
           repository: bahmutov/next-ts-app
+          # from the build ID, we get the commit matching the deployed site
+          # so let's fetch just that commit to make sure our report
+          # uses the correct source files
+          ref: ${{ steps.get-build-id.outputs.commit }}
           path: next-ts-app
 
       # help the code coverage tool find the source files
