@@ -7,3 +7,9 @@
 ```
 $ DEBUG=code-coverage CYPRESS_baseUrl=https://next-ts-app-swart.vercel.app/ npx cypress open
 ```
+
+## Code coverage report
+
+The code coverage report is produced on CI using [workflows/ci.yml](./.github/workflows/ci.yml) and hosted at GitHub Pages at [https://glebbahmutov.com/next-ts-app-tests/](https://glebbahmutov.com/next-ts-app-tests/)
+
+![Code coverage report](./images/report.png)
