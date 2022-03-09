@@ -4,8 +4,19 @@ jobs:
   test:
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout 🛎
+      # https://github.com/actions/checkout
+      - name: Check out this repo 🛎
         uses: actions/checkout@v3
+
+      - name: Check out the application repo 🛎
+        uses: actions/checkout@v3
+        with:
+          repository: bahmutov/next-ts-app
+          path: next-ts-app
+
+      # help the code coverage tool find the source files
+      - name: Copy application source files 💾
+        run: cp -r next-ts-app/pages .
 
       - name: Run tests against the production site 🧪
         # https://github.com/cypress-io/github-action
@@ -15,4 +26,9 @@ jobs:
         env:
           DEBUG: code-coverage
 
-      # TODO: publish the code coverage HTML report to GitHub Pages
+      # https://github.com/marketplace/actions/github-pages-action
+      - name: Deploy code coverage report 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./coverage/lcov-report
