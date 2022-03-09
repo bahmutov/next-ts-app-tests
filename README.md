@@ -2,6 +2,8 @@
 
 > Cypress tests for [bahmutov/next-ts-app](https://github.com/bahmutov/next-ts-app) repo
 
+Read the blog post [Code Coverage For Nextjs Application](https://glebbahmutov.com/blog/code-coverage-for-nextjs-app/)
+
 ## Test the deployed application
 
 ```
