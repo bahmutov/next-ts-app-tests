@@ -11,6 +11,7 @@ workflows:
               ignore:
                 - gh-pages
           config: 'baseUrl=https://next-ts-app-swart.vercel.app/'
+          no-workspace: true
           post-steps:
             - store_artifacts:
                 path: coverage/lcov-report
