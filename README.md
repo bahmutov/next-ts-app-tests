@@ -1,4 +1,4 @@
-# next-ts-app-tests ![cypress version](https://img.shields.io/badge/cypress-9.5.1-brightgreen)
+# next-ts-app-tests ![cypress version](https://img.shields.io/badge/cypress-9.5.1-brightgreen) [![CircleCI](https://circleci.com/gh/bahmutov/next-ts-app-tests/tree/main.svg?style=svg)](https://circleci.com/gh/bahmutov/next-ts-app-tests/tree/main) [![ci](https://github.com/bahmutov/next-ts-app-tests/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bahmutov/next-ts-app-tests/actions/workflows/ci.yml)
 
 > Cypress tests for [bahmutov/next-ts-app](https://github.com/bahmutov/next-ts-app) repo
 
