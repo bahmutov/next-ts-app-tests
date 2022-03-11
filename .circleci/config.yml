@@ -6,6 +6,10 @@ workflows:
   build:
     jobs:
       - cypress/run:
+          filters:
+            branches:
+              ignore:
+                - gh-pages
           config: 'baseUrl=https://next-ts-app-swart.vercel.app/'
           post-steps:
             - store_artifacts:
