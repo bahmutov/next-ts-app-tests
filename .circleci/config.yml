@@ -1,0 +1,12 @@
+version: 2.1
+orbs:
+  # https://github.com/cypress-io/circleci-orb
+  cypress: cypress-io/cypress@1
+workflows:
+  build:
+    jobs:
+      - cypress/run:
+          config: 'baseUrl=https://next-ts-app-swart.vercel.app/'
+          post-steps:
+            - store_artifacts:
+                path: coverage/lcov-report
