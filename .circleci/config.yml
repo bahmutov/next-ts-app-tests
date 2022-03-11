@@ -14,6 +14,9 @@ workflows:
           post-checkout:
             - run: echo "Checking out the application"
             - run: git clone git@github.com:bahmutov/next-ts-app.git --depth 1
+            - run:
+                name: Link source pages to this repo
+                command: ln -s pages next-ts-app/pages
           config: 'baseUrl=https://next-ts-app-swart.vercel.app/'
           no-workspace: true
           post-steps:
