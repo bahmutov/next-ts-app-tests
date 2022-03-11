@@ -16,8 +16,9 @@ workflows:
             - run: git clone git@github.com:bahmutov/next-ts-app.git --depth 1
             - run:
                 name: Link source pages to this repo
+                # syntax is: "ln <existing folder> <link path>"
                 command: |
-                  ln -s pages next-ts-app/pages
+                  ln -s next-ts-app/pages pages
                   ls -la
           config: 'baseUrl=https://next-ts-app-swart.vercel.app/'
           no-workspace: true
